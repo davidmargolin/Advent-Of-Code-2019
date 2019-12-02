@@ -1,7 +1,7 @@
 {
   "name": "advent2019",
   "version": "1.0.0",
-  "description": "Advent Of Code Soluctions",
+  "description": "Advent Of Code Solutions",
   "scripts": {
     "start": "babel-node"
   },
