@@ -16,8 +16,8 @@ console.log(
 
 // Part 2
 
-const getFuel = input => {
-  const fuel = Math.floor(parseInt(input) / 3) - 2;
+const getFuel = mass => {
+  const fuel = Math.floor(mass / 3) - 2;
   if (fuel <= 0) return 0;
   else return fuel + getFuel(fuel);
 };
@@ -25,6 +25,6 @@ const getFuel = input => {
 console.log("Part 2:");
 console.log(
   textByLine.reduce((prev, curr) => {
-    return prev + getFuel(curr);
+    return prev + getFuel(parseInt(curr));
   }, 0)
 );
