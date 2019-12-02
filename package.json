@@ -1,0 +1,16 @@
+{
+  "name": "advent2019",
+  "version": "1.0.0",
+  "description": "Advent Of Code Soluctions",
+  "scripts": {
+    "start": "babel-node"
+  },
+  "author": "David Margolin",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "core-js-compat": "^3.4.7"
+  }
+}
