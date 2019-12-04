@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Advent Of Code Solutions",
   "scripts": {
-    "start": "babel-node"
+    "start": "babel-node",
+    "all": "for i in `seq 1 4`; do echo Day $i && npm start --silent $i && echo '\n'; done"
   },
   "author": "David Margolin",
   "license": "MIT",

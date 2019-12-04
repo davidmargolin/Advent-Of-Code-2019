@@ -13,3 +13,8 @@ npm install
 ```bash
 npm start <day>
 ```
+
+## Run All Days
+```bash
+npm run all
+```
