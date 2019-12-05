@@ -15,9 +15,12 @@ const getProgramOut = (mem, input) => {
 
     instruction = parseInt(data.splice(-2, 2).join(""));
 
-    while (data.length < 2) data.unshift("0");
-    const param1 = data[1] === "1" ? mem[pointer + 1] : mem[mem[pointer + 1]];
-    const param2 = data[0] === "1" ? mem[pointer + 2] : mem[mem[pointer + 2]];
+    while (data.unshift("0") < 2);
+    const [param1, param2] = data
+      .reverse()
+      .map((val, i) =>
+        val === "1" ? mem[pointer + i + 1] : mem[mem[pointer + i + 1]]
+      );
 
     const destination = mem[pointer + 3];
 
@@ -52,10 +55,12 @@ const getProgramOutP2 = (mem, input) => {
 
     instruction = parseInt(data.splice(-2, 2).join(""));
 
-    while (data.length < 2) data.unshift("0");
-
-    const param1 = data[1] === "1" ? mem[pointer + 1] : mem[mem[pointer + 1]];
-    const param2 = data[0] === "1" ? mem[pointer + 2] : mem[mem[pointer + 2]];
+    while (data.unshift("0") < 2);
+    const [param1, param2] = data
+      .reverse()
+      .map((val, i) =>
+        val === "1" ? mem[pointer + i + 1] : mem[mem[pointer + i + 1]]
+      );
 
     const destination = mem[pointer + 3];
 
