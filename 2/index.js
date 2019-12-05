@@ -11,7 +11,7 @@ const getProgramOut = mem => {
   for (let i = 0; mem[i] !== 99; i += 4) {
     if (mem[i] === 1) {
       mem[mem[i + 3]] = mem[mem[i + 1]] + mem[mem[i + 2]];
-    } else if (mem[i] == 2) {
+    } else if (mem[i] === 2) {
       mem[mem[i + 3]] = mem[mem[i + 1]] * mem[mem[i + 2]];
     }
   }

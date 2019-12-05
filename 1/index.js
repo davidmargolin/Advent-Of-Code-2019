@@ -10,7 +10,7 @@ const textByLine = text.split("\n");
 const fuels = textByLine.map(mass => Math.floor(parseInt(mass) / 3) - 2);
 
 console.log("Part 1:");
-console.log(fuels.reduce((prev, curr) => prev + curr, 0));
+console.log(fuels.reduce((total, curr) => total + curr, 0));
 
 // Part 2
 
@@ -23,4 +23,4 @@ const getFuel = mass => {
 const fuelsExpanded = textByLine.map(mass => getFuel(mass));
 
 console.log("Part 2:");
-console.log(fuelsExpanded.reduce((prev, curr) => prev + curr, 0));
+console.log(fuelsExpanded.reduce((total, curr) => total + curr, 0));
